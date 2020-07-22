@@ -72,7 +72,8 @@ stages:
     # https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet
     - script: >-
         dotnet ef migrations script
-        --project **/*.sln
+        --project ContosoUniversity/ContosoUniversity.csproj
+        --startup-project ContosoUniversity/ContosoUniversity.csproj
         --output $(Build.ArtifactStagingDirectory)/sql/$(scriptName)
         --idempotent
       # --runtime version: "$(dotnetRuntimeVersion)"
